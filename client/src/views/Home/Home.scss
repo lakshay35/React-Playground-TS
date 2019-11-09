@@ -1,0 +1,30 @@
+hr {
+    // height: 1px;
+}
+
+.home-text {
+    font-family: 'Roboto Mono', monospace;
+    text-align: left;
+    color: #1795e3;
+}
+
+.home-text:hover {
+    text-decoration: underline;
+}
+
+#name {
+    text-align: left;
+}
+
+
+#terminal {
+    // margin: 5% 25% 0 12%;
+}
+
+body {
+    transition: background-color 400ms ease-in-out;
+}
+
+.root {
+    padding: 3% 5% 0 5%;
+}

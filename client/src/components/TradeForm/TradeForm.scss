@@ -1,0 +1,43 @@
+.modal {
+    padding: 2%;
+    width: 50%;
+    height: fit-content;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #ffffff;
+    border: 1px solid #72baea;
+}
+
+.field {
+    width: 50%;
+    float: left;
+    padding: 2% 5% 2% 5%;
+}
+
+label {
+    display: block;
+}
+
+form {
+    font-size: 15px;
+}
+
+.fieldChild {
+    width: 100%;
+    font-size: 15px;
+    padding: 2%;
+    font-family: 'Rajdhani', sans-serif;
+    background: #ffffff;
+}
+
+select option{
+    background-color: #ffffff;
+}
+
+.hidden {
+    visibility: hidden;
+}

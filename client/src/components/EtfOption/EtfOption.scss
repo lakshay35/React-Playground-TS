@@ -1,0 +1,45 @@
+.etf-option-container {
+    background: #ffffff;
+    display: grid;
+    grid-template-columns: 15% 15% 25% 25% 20%;
+    border:1px solid #ffffff;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.etf-option-child {
+    padding: 5%;
+    margin: auto;
+    text-align: center;
+}
+
+.etf-option-container:hover {
+    border-color: #72baea;
+    cursor: pointer;
+}
+
+span {
+    /* margin: auto; */
+    font-size: 1.25em;
+}
+
+.fa-check-circle {
+    color: green;
+}
+
+.fa-info-circle {
+    margin-right: 1%;
+}
+
+.fa-info-circle:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.fa-chart-bar {
+    margin-right: 4%;
+}

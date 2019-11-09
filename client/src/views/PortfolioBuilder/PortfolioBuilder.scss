@@ -1,0 +1,145 @@
+.stepper-view {
+    display: grid;
+    grid-auto-columns: 1fr;
+    background-color: #ffffff;
+    min-height: 64vh;
+}
+
+.step h5 {
+    padding: 4%;
+}
+
+.etf-customization-view {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.tolerance {
+    display: grid;
+    height: 64vh;
+    grid-template-rows: auto auto auto;
+    margin: .25% .25% 0 .25%;
+}
+
+.major {
+    font-size: 2.5vh;
+}
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
+}
+
+.minor {
+    font-size: 1.75vh;
+}
+
+.center {
+    margin: auto;
+}
+
+.risk-view {
+    /* height: 64vh; */
+    margin: .25% .25% 0 .25%;
+}
+
+.customization-total {
+    display: grid;
+    position: relative;
+    grid-template-columns: auto auto auto;
+    max-width: 35vw;
+    height: 100%;
+    float: right;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.show {
+    visibility: initial;
+}
+
+.customization-total-child:hover {
+    background: #f2f2f2;
+}
+
+.customization-total-child {
+    text-align: center;
+    font-size: 18px;
+    width: 30%;
+}
+
+.return {
+    display: grid;
+    grid-template-columns: auto auto;
+    max-width: 50vw;
+}
+
+PieDonut {
+    margin-left: auto;
+}
+
+.riskTolerance {
+    display: grid;
+    grid-template-columns: 30vw auto;
+}
+
+.step {
+    background-color: rgb(127, 182, 227);
+    font-size: 2vh;
+    text-align: center;
+    height: 20vh;
+    width: 30vw;
+}
+
+
+.step:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.title {
+    top: 0;
+    left: 0;
+}
+
+.view {
+    padding: 0 2% 2% 2%; 
+    width: 100vw;
+}
+
+.initialInvestment {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2vh;
+    margin: auto;
+    padding: 1%;
+    width: 20%;
+}
+
+.green {
+    color: green;
+}
+
+.instruction-text {
+    width: fit-content;
+    display: flex !important;
+    width: 50vw;
+}
+
+.mini-header {
+    display: flex !important;
+    flex-direction: row;
+}
+
+.instruction-text > h4 {
+    margin-left: 2%;
+}
+
+.donut {
+    width: 100%;
+    height: 100%;
+}

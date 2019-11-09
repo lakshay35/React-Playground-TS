@@ -1,0 +1,34 @@
+.portfolio-container {
+    animation-name: slideLeft;
+    -webkit-animation-name: slideLeft;
+
+    animation-duration: 500mss;
+    -webkit-animation-duration: 500ms;
+
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+
+    visibility: visible !important;
+
+    font-family: 'Roboto Mono', monospace;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(150%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes slideLeft {
+    0% {
+        -webkit-transform: translateX(150%);
+    }
+
+    100% {
+        -webkit-transform: translateX(0%);
+    }
+}

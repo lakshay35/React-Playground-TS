@@ -1,0 +1,33 @@
+Login {
+    height: 100vh;
+    width: 100vw;
+}
+
+.error {
+    color: red;
+}
+
+.option:hover {
+    cursor: pointer;
+}
+
+body {
+    padding-top: 65px;
+}
+
+.formButton {
+    padding: 3% 5% 3% 5%;
+    border-radius: 5%;
+    border: 0.5px solid #72baea;
+    background: #ffffff;
+    color: #72baea;
+    transition-duration: 0.5s;
+    font-size: 15px;
+    margin-right: 5%;
+}
+
+.formButton:hover {
+    cursor: pointer;
+    background: #72baea;
+    color: #ffffff;
+}
