@@ -12,7 +12,6 @@
 # EXPOSE 80
 # CMD ["nginx", "-g", "daemon off;"]
 
-
 FROM mhart/alpine-node:11 AS builder
 WORKDIR /app
 COPY . .
