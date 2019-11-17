@@ -1,13 +1,9 @@
 pipeline {
 
-  environment {
-    registry = "908173109448.dkr.ecr.us-east-2.amazonaws.com/personal"
-    registryCredential = 'ECR'
-  }
-
   agent any
-  stages {
-    try {
+
+  try {
+    stages {
       stage('Building image') {
         steps{
           script {
@@ -15,7 +11,8 @@ pipeline {
           }
         }
       }
-    } catch (e) {
+    }
+  } catch (e) {
       // If there was an exception thrown, the build failed
       currentBuild.result = "FAILED"
       throw e
@@ -23,9 +20,8 @@ pipeline {
       // Success or failure, always send notifications
       notifyBuild(currentBuild.result)
     }
-  }
-   
 }
+
 def notifyBuild(String buildStatus = 'STARTED') {
     // build status of null means successful
     buildStatus =  buildStatus ?: 'SUCCESSFUL'
