@@ -1,8 +1,8 @@
 pipeline {
-
+  environment {
+    FAILED_STAGE = ""
+  }
   agent any
-
-  def FAILED_STAGE
 
   stages {
     stage('Some Step') {
