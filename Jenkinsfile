@@ -34,7 +34,7 @@ pipeline {
 
   post {
     success {
-      sendSlackMessage('react-portal', "SUCEEDED ${FAILED_STAGE}: Job: '${env.BUILD_TAG} (${env.BUILD_URL})' on node ${env.NODE_NAME}", '#0d9e0d')
+      sendSlackMessage('react-portal', "FAILED ${FAILED_STAGE}: Job: '${env.BUILD_TAG} (${env.BUILD_URL})' on node ${env.NODE_NAME}", '#0d9e0d')
     }
     failure {
       sendSlackMessage('react-portal', "FAILED ${FAILED_STAGE}: Job: '${env.BUILD_TAG} (${env.BUILD_URL})' on node ${env.NODE_NAME}", '#FF0000')
@@ -59,7 +59,6 @@ pipeline {
 
 }
 
-
-def sendDiscordMessage(String description, String footer) {
-  discordSend(description: description, footer: footer, link: env.BUILD_URL, result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "https://discordapp.com/api/webhooks/645399067563786257/nXSp4TL16ija8nCO1_Ji9XFJZc6tQJF0-J1ju0MbNo0CprC_gcDSDKrKBcwMOnreW4qR")
+def sendSlackMessage(String channel, String message, String color) {
+  slackSend(channel: channel, message: message, color: color)
 }
