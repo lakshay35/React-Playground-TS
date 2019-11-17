@@ -5,24 +5,12 @@ pipeline {
   agent any
 
   stages {
-    stage('Some Step') {
-      steps {
-        script {
-          try {
-            echo 'Hello world'
-          } catch (e) {
-            FAILED_STAGE = "Some Step"
-            error "Failed Build"
-          }
-        }
-      }
-    }
-
+    
     stage('Docker Image Build') {
       steps{
         script {
           try {
-            docker.build registry + ":$BUILD_NUMBER"
+            docker.build "react-console:latest"
           } catch (e) {
             FAILED_STAGE = "Docker Image Build"
             error "Failed Build"
@@ -33,9 +21,11 @@ pipeline {
   }
 
   post {
+
     success {
       sendSlackMessage('react-portal', "FAILED ${FAILED_STAGE}: Job: '${env.BUILD_TAG} (${env.BUILD_URL})' on node ${env.NODE_NAME}", '#0d9e0d')
     }
+
     failure {
       sendSlackMessage('react-portal', "FAILED ${FAILED_STAGE}: Job: '${env.BUILD_TAG} (${env.BUILD_URL})' on node ${env.NODE_NAME}", '#FF0000')
     }
@@ -50,10 +40,6 @@ pipeline {
 
     unstable {
       sendSlackMessage('react-portal', "UNSTABLE: Job: '${env.BUILD_TAG} (${env.BUILD_URL})' on node ${env.NODE_NAME}", '#FFFF00')
-    }
-
-    unsuccessful {
-      sendSlackMessage('react-portal', "UNSUCCESSFUL: Job: '${env.BUILD_TAG} (${env.BUILD_URL})' on node ${env.NODE_NAME}", '#FFFF00')
     }
   } 
 
